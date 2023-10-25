@@ -1,15 +1,16 @@
 package com.nayemtech;
 
 import java.awt.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Point pointA = new Point(2,5);
-        Point pointB = pointA;
+        int[] numbers = new int[3];
+        numbers[0] = 21;
+        numbers[1] = 6;
+        numbers[2] = 42;
 
-        pointA.x = 100;
-
-        System.out.println(pointA);
-        System.out.println(pointB);
+        System.out.println(numbers[0]);
+        System.out.println(Arrays.toString(numbers));
     }
 }
