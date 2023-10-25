@@ -1,6 +1,6 @@
 package com.nayemtech;
 
-public class temp {
+public class Temp {
     public void meth() {
         System.out.println(Main.str);
     }
