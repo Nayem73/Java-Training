@@ -12,5 +12,13 @@ public class Main {
 
         System.out.println(numbers[0]);
         System.out.println(Arrays.toString(numbers));
+
+
+        int[] numbers2 = {3,4,6,7};
+        System.out.println(Arrays.toString(numbers2));
+
+        int[] numbers3 = new int[12];
+        Arrays.fill(numbers3, -1);
+        System.out.println(Arrays.toString(numbers3));
     }
 }
