@@ -1,22 +1,27 @@
 package com.nayemtech;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        String s = "whatGives";
-        Integer[] s = new Integer[5];
-//        Arrays.fill(s, 0);
+        List<Integer> s = new ArrayList<>(5); // Declare a list of Integer and initialize with size 5
 
-        String t;
-        for (int i = 0; i < 5; i++) {
-            if (s[i] == null) {
+        // Add elements to the list
+        s.add(2);
+        s.add(4);
+        s.add(6);
+        s.add(8);
+        s.add(10);
+
+        for (int i = 0; i < s.size(); i++) {
+            if (s.get(i) == 4) {
                 System.out.println(i);
             } else {
-                System.out.println(i + " " + s[i]);
+                System.out.println(i + " " + s.get(i));
             }
         }
-        System.out.println(s);
+
+        System.out.println(s); // Print the contents of the list
     }
 }
