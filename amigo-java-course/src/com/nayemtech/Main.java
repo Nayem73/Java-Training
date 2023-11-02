@@ -1,19 +1,20 @@
 package com.nayemtech;
 
-import java.util.Arrays;
+interface StringSupplier {
+    String get();
+}
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Gender.MALE);
-        Gender f = Gender.FEMALE;
-        System.out.println(f);
+        String s = "from main method";
 
-        System.out.println();
-        for (Gender gender : Gender.values()) {
-            System.out.println(gender);
-        }
+        // Using a lambda expression to access the variable 's'
+        StringSupplier supplier = () -> s;
+        fnc(supplier);
+    }
 
-        System.out.println();
-        System.out.println(Arrays.toString(Gender.values()));
+    public static void fnc(StringSupplier supplier) {
+        String value = supplier.get();
+        System.out.println(value); // Accessing 's' indirectly in fnc method
     }
 }
