@@ -1,20 +1,14 @@
 package com.nayemtech;
 
-interface StringSupplier {
-    String get();
-}
-
 public class Main {
     public static void main(String[] args) {
-        String s = "from main method";
-
-        // Using a lambda expression to access the variable 's'
-        StringSupplier supplier = () -> s;
-        fnc(supplier);
-    }
-
-    public static void fnc(StringSupplier supplier) {
-        String value = supplier.get();
-        System.out.println(value); // Accessing 's' indirectly in fnc method
+        String s = "whatGives";
+        String t;
+        for (int i = 0; i < (int)s.length(); i++) {
+            if (s[i] == 'v') {
+                s[i] = '5';
+            }
+        }
+        System.out.println(s);
     }
 }
