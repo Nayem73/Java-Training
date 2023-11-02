@@ -9,5 +9,9 @@ public class Main {
 
         String formattedString = String.format("like printing Strings in C & extra feature: numToString=%s, num=%s\n", numToString, num);
         System.out.println(formattedString);
+
+        String[] s1 = {"cat", "tiger", "elephant"};
+        String s2 = String.join(" | ", s1);
+        System.out.println(s2);
     }
 }
