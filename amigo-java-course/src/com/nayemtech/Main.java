@@ -1,27 +1,15 @@
 package com.nayemtech;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
-        List<Integer> s = new ArrayList<>(5); // Declare a list of Integer and initialize with size 5
+        String s1 = "abcd";
+        String s2 = s1;
 
-        // Add elements to the list
-        s.add(2);
-        s.add(4);
-        s.add(6);
-        s.add(8);
-        s.add(10);
+        s1 = s1.replace('c', '6');
+        System.out.println(s1);
+        System.out.println(s2);
 
-        for (int i = 0; i < s.size(); i++) {
-            if (s.get(i) == 4) {
-                System.out.println(i);
-            } else {
-                System.out.println(i + " " + s.get(i));
-            }
-        }
+        String s3 = new String("This String is not in String pool, it is in heap memory");
 
-        System.out.println(s); // Print the contents of the list
     }
 }
