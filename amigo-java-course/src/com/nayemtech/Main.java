@@ -7,5 +7,10 @@ public class Main {
         System.out.println(Gender.MALE);
         Gender f = Gender.FEMALE;
         System.out.println(f);
+
+        System.out.println();
+        for (Gender gender : Gender.values()) {
+            System.out.println(gender);
+        }
     }
 }
