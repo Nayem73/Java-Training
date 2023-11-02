@@ -13,5 +13,10 @@ public class Main {
         BigDecimal num2 = new BigDecimal(0.02);
         BigDecimal num3 = num1.subtract(num2);
         System.out.println(num3);
+
+        BigDecimal n1 = new BigDecimal("0.03");
+        BigDecimal n2 = new BigDecimal("0.02");
+        BigDecimal n3 = n1.subtract(n2);
+        System.out.println(n3);
     }
 }
