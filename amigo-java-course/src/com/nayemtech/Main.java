@@ -2,14 +2,12 @@ package com.nayemtech;
 
 public class Main {
     public static void main(String[] args) {
-        String s1 = "abcd";
-        String s2 = s1;
+        String numToString = String.valueOf(56); //convert Integer to String
+        System.out.println(numToString);
 
-        s1 = s1.replace('c', '6');
-        System.out.println(s1);
-        System.out.println(s2);
+        int num = 23;
 
-        String s3 = new String("This String is not in String pool, it is in heap memory");
-
+        String formattedString = String.format("like printing Strings in C & extra feature: numToString=%s, num=%s\n", numToString, num);
+        System.out.println(formattedString);
     }
 }
