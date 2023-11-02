@@ -4,19 +4,13 @@ import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) {
-        double x = 0.03;
-        double y = 0.02;
-        double z = x - y;
-        System.out.println(z);
+        try {
+            int number = Integer.parseInt("18");
+        } catch (NumberFormatException e) {
+            System.out.println("Failed to parse");
+        }
 
-        BigDecimal num1 = new BigDecimal(0.03);
-        BigDecimal num2 = new BigDecimal(0.02);
-        BigDecimal num3 = num1.subtract(num2);
-        System.out.println(num3);
-
-        BigDecimal n1 = new BigDecimal("0.03");
-        BigDecimal n2 = new BigDecimal("0.02");
-        BigDecimal n3 = n1.subtract(n2);
-        System.out.println(n3);
+        System.out.println("number can not be printed though! cz it is inside try block");
+        //System.out.println(number); can't
     }
 }
