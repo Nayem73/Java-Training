@@ -12,5 +12,8 @@ public class Main {
         for (Gender gender : Gender.values()) {
             System.out.println(gender);
         }
+
+        System.out.println();
+        System.out.println(Arrays.toString(Gender.values()));
     }
 }
