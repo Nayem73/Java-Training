@@ -1,19 +1,18 @@
 package com.nayemtech;
 
-import java.util.Date;
+import java.util.Arrays;
 
 public class Main {
-
-    public static String str = "string is here";
-    public String str2 = "without static";
-    public void meth2() {}
     public static void main(String[] args) {
-        System.out.println(str);
-        Main main = new Main();
-        System.out.println(main.str2);
-        meth();
-        main.meth2();
-    }
+        var x = 33.55; //var keyword = auto in C++;
+        var y = "what";
+        var z = 34;
 
-    public static void meth() {}
+        int[] arr = new int[5];
+        Arrays.fill(arr, 23);
+        System.out.println(x);
+        System.out.println(x + ' ' + y + ' ' + z);
+        System.out.println(x + " " + y + " " + z);
+        System.out.println(Arrays.toString(arr));
+    }
 }
