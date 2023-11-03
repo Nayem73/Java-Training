@@ -12,6 +12,8 @@ public class Main {
             System.out.println(number);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        } finally {
+            System.out.println("finally always runs whether there's any exception or not.");
         }
     }
 }
