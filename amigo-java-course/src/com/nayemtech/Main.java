@@ -1,19 +1,17 @@
 package com.nayemtech;
 
-import java.math.BigDecimal;
-import java.sql.SQLOutput;
+import java.io.File;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            int number = Integer.parseInt("18ui");
-            int y = 5/0;
-            //if above try fails, anything under this line will not be executed.
-            System.out.println(number);
-        } catch (Exception e) {
+            File file = new File("src/mycreatedfile.txt");
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+        } catch (IOException e) {
             System.out.println(e.getMessage());
-        } finally {
-            System.out.println("finally always runs whether there's any exception or not.");
         }
     }
 }
