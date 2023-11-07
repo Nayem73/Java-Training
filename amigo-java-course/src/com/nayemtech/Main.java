@@ -5,7 +5,7 @@ public class Main {
         neg(3, 10);
     }
 
-    public static void neg(int a, int b) {
+    public static void neg(int a, int b) throws IllegalArgumentException {
         if (b >= a) {
             throw new IllegalArgumentException("can not subtract b from a because b is bigger than a");
         }
