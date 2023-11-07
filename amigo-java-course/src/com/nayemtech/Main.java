@@ -1,17 +1,16 @@
 package com.nayemtech;
 
-import java.io.File;
-import java.io.IOException;
-
 public class Main {
     public static void main(String[] args) {
-        try {
-            File file = new File("src/mycreatedfile.txt");
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        neg(3, 10);
+    }
+
+    public static void neg(int a, int b) {
+        if (b >= a) {
+            throw new IllegalArgumentException("can not subtract b from a because b is bigger than a");
         }
+
+        a -= b;
+        System.out.println(a);
     }
 }
