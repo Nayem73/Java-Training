@@ -6,7 +6,7 @@ public class Main {
         try {
             int y = 5/0;
             System.out.println("After Error");
-        } catch (NumberFormatException | ArithmeticException e) {
+        } catch (Exception e) {
             System.out.println("Nayem printing the error message by e.getMessage(): " + e.getMessage());
         }
     }
