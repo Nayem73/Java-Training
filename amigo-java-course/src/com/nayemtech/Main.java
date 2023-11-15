@@ -1,9 +1,10 @@
 package com.nayemtech;
 
 import java.io.File;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         File file = new File("src/tmp.txt");
         if (!file.exists()) {
             file.createNewFile();
