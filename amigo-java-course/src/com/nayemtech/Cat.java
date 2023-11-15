@@ -8,8 +8,17 @@ public class Cat {
     public Cat() {
     }
 
-    public Cat(String name, int age, String color) {
+    public Cat(String name, String color) {
         this.name = name;
+        this.age = 0;
+        this.color = color;
+    }
+    public Cat(String name, int age, String color) {
+        this(age, color);
+        this.name = name;
+    }
+
+    public Cat(int age, String color) {
         this.age = age;
         this.color = color;
     }
