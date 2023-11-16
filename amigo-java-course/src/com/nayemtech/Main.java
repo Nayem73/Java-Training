@@ -9,6 +9,6 @@ public class Main {
         Cat cat2 = new Cat("Jupyter", 0, "White");
         System.out.println(cat2);
 
-        System.out.println(cat.equals(cat2));
+        System.out.println(cat==cat2);
     }
 }
