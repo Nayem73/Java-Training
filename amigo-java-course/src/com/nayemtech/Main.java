@@ -6,9 +6,10 @@ public class Main {
         System.out.println(cat.getName());
         System.out.println(cat);
 
-        Cat cat2 = cat;
+        Cat cat2 = new Cat("Jupyter", "White");
         System.out.println(cat2);
 
-        System.out.println(cat==cat2);
+        System.out.println(cat == cat2);
+        System.out.println(cat.equals(cat2));
     }
 }
