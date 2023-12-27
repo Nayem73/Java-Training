@@ -28,11 +28,11 @@ public class Car implements Serializable {
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                "regNumber='" + regNumber + '\'' +
-                ", price=" + price +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Car{" +
+//                "regNumber='" + regNumber + '\'' +
+//                ", price=" + price +
+//                '}';
+//    }
 }
