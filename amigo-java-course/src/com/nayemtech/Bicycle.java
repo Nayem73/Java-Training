@@ -4,11 +4,15 @@ public class Bicycle extends Vehicle{
     private Boolean isGear;
     private Boolean hasCarrier;
 
+    public Bicycle() {
+    }
+
     public Bicycle(String brand, int price, Boolean isGear, Boolean hasCarrier) {
         super(brand, price);
         this.isGear = isGear;
         this.hasCarrier = hasCarrier;
     }
+
 
     public Boolean getGear() {
         return isGear;

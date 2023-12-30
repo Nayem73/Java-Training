@@ -1,8 +1,12 @@
 package com.nayemtech;
 
-abstract public class Vehicle {
-    private String brand;
+public abstract class Vehicle {
+    protected String brand;
     private int price;
+
+    public Vehicle() {
+        System.out.println("Constructor of abstract class Vehicle is getting called!");
+    }
 
     public Vehicle(String brand, int price) {
         this.brand = brand;

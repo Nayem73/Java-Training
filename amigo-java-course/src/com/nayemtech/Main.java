@@ -2,8 +2,8 @@ package com.nayemtech;
 
 public class Main {
     public static void main(String[] args) {
-        Vehicle bicycle = new Bicycle("Max", 3000, false, true);
+        Shape circle = new Circle(5);
+        System.out.println(circle.area());
 
-        System.out.println(bicycle);
     }
 }
