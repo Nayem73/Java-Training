@@ -1,12 +1,14 @@
 package com.nayemtech;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CalculateArea {
-    ArrayList<Shape> shapes = new ArrayList<>();
-    Shape circle = new Circle(3);
-    Shape circle2 = new Circle(5);
-    Shape triangle = new Triangle(5, 7);
-
-    shapes.
+    public double totalArea(List<Shape> shapes) {
+        double sum = 0;
+        for (Shape X: shapes) {
+            sum +=  X.area();
+        }
+        return sum;   
+    }
 }

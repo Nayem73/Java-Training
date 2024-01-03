@@ -1,6 +1,6 @@
 package com.nayemtech;
 
-public abstract class Vehicle {
+public class Vehicle {
     protected String brand;
     private int price;
 
