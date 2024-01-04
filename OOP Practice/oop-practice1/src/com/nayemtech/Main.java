@@ -1,32 +1,25 @@
 package com.nayemtech;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Person Rahim = new Person("Rahim", 23);
-        Person Karim = new Person("Karim", 33);
+        Bank sonaliBank = new Bank(); // ei bank er under e nicher account gulo thakbe tai ei line sobar first e likhlam
 
-        System.out.println(Rahim.getName() + " " + Rahim.getAge());
-        System.out.println(Karim.getName() + " " + Karim.getAge());
+        Account nayemAccount = new Account(123, "Nayem", new BigDecimal("12000"));
+        Account jimAccount = new Account(129, "Jim", new BigDecimal("30000"));
+        Account karimAccount = new Account(391, "Karim", new BigDecimal("0"));
 
-        Main main = new Main();
-        Vehicle car = main.new Vehicle("Audi", 34000);
-        System.out.println(car.name);
-    }
+//        nayemAccount.deposit(333); This is how it should have been. so follow this and implement open/closed principle
 
-    public class Vehicle {
-        private String name;
-        private int price;
+        sonaliBank.executeOperation(new Deposit(nayemAccount, new BigDecimal("1000.99"))); // executeOperation method ta Bank class e die, ei line er moto korleo hoy
+                                                                    // abar direct main class e Bank er instance create kore korleo hoy.
 
-        public Vehicle(String name, int price) {
-            this.name = name;
-            this.price = price;
-        }
+        System.out.println(nayemAccount.getBalance());
 
-        public String getName() {
-            return name;
-        }
-        public int getPrice() {
-            return price;
-        }
     }
 }
