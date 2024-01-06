@@ -11,11 +11,11 @@ public class Main {
         String d = "321.555.4321";
         String e = "CoreyMSchafer@gmail.com";
 
-        System.out.println(isValid(a));
+        System.out.println(isValid(e));
     }
 
     public static boolean isValid(String inputString) {
-        String pattern = "\\d\\d\\d[.-]\\d\\d\\d[-]\\d\\d\\d\\d";
+        String pattern = "[a-zA-Z0-9.-_]+@[a-zA-Z-]+\\.[a-zA-Z]+";
         Pattern regex = Pattern.compile(pattern);
         Matcher matcher = regex.matcher(inputString);
         return matcher.matches();
