@@ -1,23 +1,38 @@
 package com.nayemtech;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        String a = "321.555-4321";
-        String b = "321-555.4321";
-        String c = "39.3";
-        String d = "321.555.4321";
-        String e = "CoreyMSchafer@gmail.com";
+        List<Pair> store = new ArrayList<>();
+        store.add(new Pair(2,1));
+        store.add(new Pair(22,11));
+        store.add(new Pair(19,12));
+        store.add(new Pair(13,122));
+        store.add(new Pair(211,-10));
+        store.add(new Pair(4,0));
+        store.add(new Pair(-4,9));
 
-        System.out.println(isValid(e));
+        Collections.sort(store, new PairComparator());
+
+        for (Pair X: store) {
+            System.out.println(X.first + " " + X.second);
+        }
     }
+}
 
-    public static boolean isValid(String inputString) {
-        String pattern = "[a-zA-Z0-9.-_]+@[a-zA-Z-]+\\.[a-zA-Z]+";
-        Pattern regex = Pattern.compile(pattern);
-        Matcher matcher = regex.matcher(inputString);
-        return matcher.matches();
+class Pair {
+    int first;
+    int second;
+
+    Pair(int first, int second) {
+        this.first = first;
+        this.second = second;
+    }
+}
+
+class PairComparator implements Comparator<Pair> {
+    public int compare(Pair a, Pair b) {
+        return b.second - a.second;
     }
 }

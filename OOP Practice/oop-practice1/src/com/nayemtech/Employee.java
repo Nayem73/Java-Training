@@ -8,9 +8,10 @@ public class Employee {
 
     private double salary;
     private LocalDateTime hireDate;
+    private static int age;
 
-    private Employee() {
 
+    public Employee() {
     }
 
     public Employee(String name, double salary, LocalDateTime hireDate) {
@@ -18,15 +19,42 @@ public class Employee {
         this.salary = salary;
         this.hireDate = hireDate;
     }
-//    public long calculateYearsOfService() {
-////        public long nice() {
-//            long x = 4;
-//            return x;
-//        }
-//        LocalDateTime curTime = LocalDateTime.now();
-//        Duration duration = Duration.between(hireDate, curTime);
-//        return duration.toDays()/365;
-//    }
 
+    public final String canYou(Integer t) {
+        System.out.println("canYou overload?");
+        return t.toString();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public LocalDateTime getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(LocalDateTime hireDate) {
+        this.hireDate = hireDate;
+    }
+
+    public static int getAge() {
+        return age;
+    }
+
+    public static void setAge(int age) {
+        Employee.age = age;
+    }
 }
 
