@@ -2,6 +2,9 @@ package com.nayemtech.javamasterclass;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +13,8 @@ import java.util.*;
 
 @SpringBootApplication
 @RestController
+@Service
+@Repository
 public class JavamasterclassApplication {
 
 	public static void main(String[] args) {

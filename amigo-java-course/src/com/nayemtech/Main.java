@@ -1,12 +1,15 @@
 package com.nayemtech;
 
-import java.util.*;
+import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
-        String a = "a";
-        String b = "b";
+       Box<Phone> box = new Box<>();
+       box.setT(new Phone("Realme"));
+       System.out.println(box.getT());
 
-        System.out.println(b.compareTo(a));
+       Box<Letter> letterBox = new Box<>();
+       letterBox.setT(new Letter("Karim vai", LocalDateTime.now(), 46));
+        System.out.println(letterBox.getT());
     }
 }
