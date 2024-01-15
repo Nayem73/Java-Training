@@ -1,15 +1,28 @@
 package com.nayemtech;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-       Box<Phone> box = new Box<>();
-       box.setT(new Phone("Realme"));
-       System.out.println(box.getT());
+       List<Double> numbers = new ArrayList<>(List.of(2.0,3.339,1.205));
+       System.out.println(countGreaterThan(numbers, 1.0));
 
-       Box<Letter> letterBox = new Box<>();
-       letterBox.setT(new Letter("Karim vai", LocalDateTime.now(), 46));
-        System.out.println(letterBox.getT());
+       List<Integer> numbers2 = new ArrayList<>(List.of(2,3,1));
+        System.out.println(countGreaterThan(numbers2, 1));
+
+    }
+
+    public interface A{}
+    public interface B{}
+
+    public static <T extends Number & Comparable<T> & A & B> int countGreaterThan(List<T> numbers, T number) {
+        int count = 0;
+        for (T X: numbers) {
+            if (X.compareTo(number) > 0) {
+                count++;
+            }
+        }
+        return count;
     }
 }
