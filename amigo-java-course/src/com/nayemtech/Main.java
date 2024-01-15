@@ -13,10 +13,9 @@ public class Main {
 
     }
 
-    public interface A{}
-    public interface B{}
 
-    public static <T extends Number & Comparable<T> & A & B> int countGreaterThan(List<T> numbers, T number) {
+
+    public static <T extends Number & Comparable<T>> int countGreaterThan(List<T> numbers, T number) {
         int count = 0;
         for (T X: numbers) {
             if (X.compareTo(number) > 0) {
