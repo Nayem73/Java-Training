@@ -13,6 +13,9 @@ public class Letter {
         this.age = age;
     }
 
+    public Letter() {
+    }
+
     public String getSender() {
         return sender;
     }

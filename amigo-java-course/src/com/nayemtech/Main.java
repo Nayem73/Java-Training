@@ -1,27 +1,23 @@
 package com.nayemtech;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-       List<Double> numbers = new ArrayList<>(List.of(2.0,3.339,1.205));
-       System.out.println(countGreaterThan(numbers, 1.0));
+//        List<BigDecimal> list = new ArrayList<>(List.of( new BigDecimal("4444444932"))); //class BigDecimal extends abstract class Number
+        List<Integer> list2 = new ArrayList<>(List.of(4,2,1)); // class Integer extends abstract class Number
+        List<Number> list3 = new ArrayList<>();
 
-       List<Integer> numbers2 = new ArrayList<>(List.of(2,3,1));
-        System.out.println(countGreaterThan(numbers2, 1));
-
+//        print(list);
+        print(list2);
+        print(list3);
     }
 
-
-
-    public static <T extends Number & Comparable<T>> int countGreaterThan(List<T> numbers, T number) {
-        int count = 0;
-        for (T X: numbers) {
-            if (X.compareTo(number) > 0) {
-                count++;
-            }
+    public static void print(List<? super Integer> list) {
+        for (var X : list) {
+            System.out.println(X);
         }
-        return count;
     }
 }
