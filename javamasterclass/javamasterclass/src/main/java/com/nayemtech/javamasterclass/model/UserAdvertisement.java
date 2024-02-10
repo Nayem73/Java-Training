@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @Entity
-@RestController
 public class UserAdvertisement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,5 +19,4 @@ public class UserAdvertisement {
     private String description;
     private LocalDateTime localDateTime;
 
-    ApplicationContext
 }
