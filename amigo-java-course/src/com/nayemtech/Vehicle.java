@@ -2,11 +2,8 @@ package com.nayemtech;
 
 public class Vehicle {
     public String vehicleType;
-    public String name = "vehicleName";
 
-    public String getName() {
-        this.name = "vehicleName";
-        return this.name;
+    public Vehicle() {
     }
 
     public Vehicle(String vehicleType) {
@@ -19,9 +16,5 @@ public class Vehicle {
 
     public void setVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
-    }
-
-    public void printFromCar() {
-        System.out.println("from Vehicle");
     }
 }
