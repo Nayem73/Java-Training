@@ -1,23 +1,9 @@
 package com.nayemtech;
 
-public class Main implements InterfaceA, InterfaceB, InterfaceC {
-    @Override
-    public void doSomething() {
-        System.out.println("doSomething implementation from Main class");
-    }
+public class Main {
     public static void main(String[] args) {
-        InterfaceA interfaceA = new Main();
-        interfaceA.doSomething();
-
-
-        InterfaceB interfaceB = new TmpMain();
-        interfaceB.doSomething();
-
-        Main main = new Main();
-        main.doSomething();
-
-        TmpMain tmpMain = new TmpMain();
-        tmpMain.doSomething();
+        Vehicle toyota = new Car("Car", "Toyota");
+        System.out.println(toyota.name);
+        System.out.println(toyota.getName());
     }
-
 }
