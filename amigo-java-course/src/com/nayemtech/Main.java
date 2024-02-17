@@ -1,14 +1,20 @@
 package com.nayemtech;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Singleton singleton;
-        Singleton singleton1;
+        List<Shape> differentShapes = new ArrayList<>();
+        Shape circle1 = new Circle(4);
+        Shape triangle1 = new Triangle(5, 3);
 
-        singleton = Singleton.getSingleton();
-        singleton1 = Singleton.getSingleton();
+        differentShapes.add(circle1);
+        differentShapes.add(triangle1);
 
-        System.out.println(singleton);
-        System.out.println(singleton1);
+
+        for (Shape currentShape : differentShapes) {
+            currentShape.calculateShape();
+        }
     }
 }
