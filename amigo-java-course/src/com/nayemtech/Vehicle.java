@@ -3,10 +3,10 @@ package com.nayemtech;
 public class Vehicle {
     public String vehicleType;
 
-    public Vehicle() {
+    Vehicle() {
     }
 
-    public Vehicle(String vehicleType) {
+    Vehicle(String vehicleType) {
         this.vehicleType = vehicleType;
     }
 
@@ -16,5 +16,9 @@ public class Vehicle {
 
     public void setVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
+    }
+
+    public void RealVehicle() {
+        System.out.println("Vehicle should Have different types.");
     }
 }
