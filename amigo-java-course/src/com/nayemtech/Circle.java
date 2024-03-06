@@ -7,11 +7,8 @@ public class Circle implements Shape {
         this.radius = radius;
     }
 
-
-    @Override
-    public void calculateShape() {
-        double circleArea = Math.PI * this.radius * this.radius;
-        System.out.print("Area of circle with radius = " + this.radius + " is: ");
-        System.out.println(circleArea);
-    }
+   @Override
+   public double area() {
+        return Math.PI * radius * radius;
+   }
 }

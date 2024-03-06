@@ -1,6 +1,6 @@
 package com.nayemtech;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle implements InterfaceA implements InterfaceB  {
     public String brand;
 
     public Car(String vehicleType, String brand) {
@@ -17,5 +17,10 @@ public class Car extends Vehicle{
         System.out.println("ok from Car");
         System.out.println("ok from Car");
         RealVehicle();
+    }
+
+    @Override
+    public void doSomething() {
+
     }
 }
