@@ -18,38 +18,24 @@ public class Main {
         //4 for size
         //0 for exit
 
-        Node head = null;
-        Node prevN = null;
+        Stack stack = new Stack();
         Scanner scanner = new Scanner(System.in);
-        int stackSize = 0;
         while (true) {
             int operation = scanner.nextInt();
             if (operation == 1) {
                 int insertValue = scanner.nextInt();
-                if (head == null) {
-                    head = new Node(insertValue);
-                    prevN = head;
-                } else {
-                    prevN.next = new Node(insertValue);
-                    prevN.next.prev = prevN;
-                    prevN = prevN.next;
-                }
-                stackSize++;
+                stack.push(insertValue);
             } else if (operation == 2) {
-                if (stackSize == 0) {
-                    System.out.println("stack is empty!");
-                } else {
-                    prevN = prevN.prev;
-                    stackSize--;
+                if (stack.isEmpty()) System.out.println("stack is empty!");
+                else {
+                    int poppedValue = stack.pop();
+                    System.out.println(poppedValue + " is popped");
                 }
             } else if (operation == 3) {
-                if (stackSize == 0) {
-                    System.out.println("stack is empty!");
-                } else {
-                    System.out.println("top = " + prevN.val);
-                }
+                if (stack.isEmpty()) System.out.println("stack is empty!");
+                else System.out.println(stack.top());
             } else if (operation == 4) {
-                System.out.println("stack size is = " + stackSize);
+                System.out.println(stack.size());
             } else if (operation == 0) {
                 break;
             }
