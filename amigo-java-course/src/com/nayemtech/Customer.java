@@ -1,16 +1,14 @@
 package com.nayemtech;
 
+import java.util.Objects;
+
 public class Customer {
     private int id;
     private String name;
-    private String email;
-    private String address;
 
-    public Customer(int id, String name, String email, String address) {
+    public Customer(int id, String name) {
         this.id = id;
         this.name = name;
-        this.email = email;
-        this.address = address;
     }
 
     public int getId() {
@@ -29,19 +27,24 @@ public class Customer {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return id == customer.id && Objects.equals(name, customer.name);
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
