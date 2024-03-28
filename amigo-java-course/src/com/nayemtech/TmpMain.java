@@ -1,6 +1,6 @@
 package com.nayemtech;
 
-public class TmpMain implements InterfaceA{
+public class TmpMain implements InterfaceA {
 
 
     @Override
@@ -9,4 +9,7 @@ public class TmpMain implements InterfaceA{
     }
 
 
+    static void staticMethod() {
+//        super();
+    }
 }

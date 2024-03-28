@@ -1,12 +1,12 @@
 package com.nayemtech;
 
-public class Car implements Vehicle  {
+public class Bus implements Vehicle {
     private String vehicleType;
     private String vehicleUsed;
     private double vehicleWeight;
     private Citizen citizen;
 
-    public Car(String vehicleType, String vehicleUsed, double vehicleWeight, Citizen citizen) {
+    public Bus(String vehicleType, String vehicleUsed, double vehicleWeight, Citizen citizen) {
         this.vehicleType = vehicleType;
         this.vehicleUsed = vehicleUsed;
         this.vehicleWeight = vehicleWeight;
